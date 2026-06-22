@@ -1,913 +1,739 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prashanna Sathiyamoorthy — Data Analyst & Web Developer. Transforming data into insights, crafting digital experiences that matter.">
+  <meta name="theme-color" content="#2563EB">
+  <meta property="og:title" content="Prashanna Sathiyamoorthy — Data Analyst & Web Developer">
+  <meta property="og:description" content="Transforming data into insights, crafting digital experiences that matter.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>PS</text></svg>">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="./packages/css/styles.css">
+  <title>Prashanna Sathiyamoorthy — Data Analyst & Web Developer</title>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader__content">
+      <div class="loader__logo">P<span>S</span></div>
+      <div class="loader__bar"><div class="loader__progress" id="loaderProgress"></div></div>
+      <p class="loader__text" id="loaderText">0%</p>
+    </div>
+  </div>
 
-        <!--==================== UNICONS ====================-->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="./packages/css/swiper-bundle.min.css">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="./packages/css/styles.css">
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-        <title>Prashanna</title>
-    </head>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">Prashanna Sathiyamoorthy</a>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link">
-                                <i class="uil uil-estate nav__icon"></i>Home
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i>About
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i>Skills
-                            </a>
-                        </li>
-                          <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i>Services
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i>Portfolio                                
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i>Contact                               
-                            </a>
-                        </li>
-                    </ul>
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
-                </div>
-                <div class="nav__btns">
-                    <!-- Theme change button -->
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
 
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#" class="nav__logo">Prashanna<span>.</span></a>
+      <div class="nav__menu" id="navMenu">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#expertise" class="nav__link">Expertise</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#contact" class="nav__link">Contact</a>
+        <button class="nav__close" id="navClose" aria-label="Close menu"><i class="uil uil-times"></i></button>
+      </div>
+      <div class="nav__actions">
+        <button class="change-theme" id="themeBtn" aria-label="Toggle theme"><i class="uil uil-moon"></i></button>
+        <a href="#contact" class="nav__cta">Let's Talk</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu"><i class="uil uil-apps"></i></button>
+      </div>
+    </nav>
+  </header>
 
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/prashanna-sathiyamoorthy-194704153/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                            <a href="https://twitter.com/prashanna01" target="_blank" class="home__social-icon">
-                                <i class="uil uil-twitter-alt"></i>
-                            </a>
-                            <a href="https://www.github.com" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                        </div>
-
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home__blob-img" x="" xlink:href="packages/images/pras-1.jpeg"/>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="home__data">
-                            <h1 class="home__title">Hi, I'am Prashanna</h1>
-                            <h3 class="home__subtitle">Data Analyst</h3>
-                            <p class="home__description">High level experience in data analitical knowledge and digital banking with quality work.</p>
-                            <a href="#contact" class="button button--flex home__button">
-                                Contact Me<i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Scroll Down</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                <h2 class="section__title">About Me</h2>
-                <span class="section__subtitle">My Introduction</span>
-
-                <div class="about__container container grid">
-                    <img src="packages/images/pras-2.jpeg" alt="" class="about__img">
-                    <div class="about__data">
-                        <p class="about__description">
-                            Data analyst, with extensive knowledge and years of experience, 
-                            working in Digital banking technologies and other data analitical tools, 
-                            delivering quality work.
-                        </p>
-                        <div class="about__info">
-                            <div>
-                                <span class="about__info-title">03+</span>
-                                <span class="about__info-name">Years <br> experience</span>
-                            </div>
-                            <div>
-                                <span class="about__info-title">05+</span>
-                                <span class="about__info-name">Completed <br> certifications</span>
-                            </div>
-                            <div>
-                                <span class="about__info-title">02+</span>
-                                <span class="about__info-name">companies<br>worked</span>
-                            </div>
-                        </div>
-
-                        <div class="about__buttons">
-                            <a download="" href="packages/pdf/" class="button button--flex">
-                                Download CV<i class="uil uil-download-alt button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-                <h2 class="section__title">Skills</h2>
-                <span class="section__subtitle">My technical level</span>
-
-                <div class="skills__container container grid">
-                    <div>
-                         <!--==================== SKILL-1 ====================-->
-                        <div class="skills__content skills__open">
-                            <div class="skills__header">
-                                <i class="uil uil-analytics skills__icon"></i>
-                               <div>
-                                   <h1 class="skills__title">Data Analyst</h1>
-                                   <span class="skills__subtitle">More than 2 years</span>
-                               </div>
-
-                               <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__number">60%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__python"></span>
-                                    </div>
-                                </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">Tableau</h3>
-                                       <span class="skills__number">70%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__tab"></span>
-                                   </div>
-                               </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">SQL</h3>
-                                       <span class="skills__number">50%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__sql"></span>
-                                   </div>
-                               </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">Google Suite</h3>
-                                       <span class="skills__number">70%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__google"></span>
-                                   </div>
-                               </div>
-                            </div>
-                        </div>
-                         <!--==================== SKILLS 2 ====================-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                                <i class="uil uil-money-bill skills__icon"></i>
-                               <div>
-                                   <h1 class="skills__title">Banker</h1>
-                                   <span class="skills__subtitle">More than 3 years</span>
-                               </div>
-
-                               <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">Digital Banking</h3>
-                                        <span class="skills__number">80%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__bank"></span>
-                                    </div>
-                               </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">Counters</h3>
-                                       <span class="skills__number">80%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__counter"></span>
-                                   </div>
-                               </div>
-                               <div class="skills__data">
-                                    <div class="skills__titles">
-                                      <h3 class="skills__name">Google suite</h3>
-                                      <span class="skills__number">70%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                       <span class="skills__percentage skills__google"></span>
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">MS Office</h3>
-                                       <span class="skills__number">90%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__office"></span>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <!--==================== SKILLS 3 ====================-->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                               <i class="uil uil-brackets-curly skills__icon"></i>
-                               <div>
-                                   <h1 class="skills__title">Web Developer</h1>
-                                   <span class="skills__subtitle">More than 3 years</span>
-                               </div>
-
-                               <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">HTML</h3>
-                                        <span class="skills__number">90%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__html"></span>
-                                    </div>
-                                </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">CSS</h3>
-                                       <span class="skills__number">80%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__css"></span>
-                                   </div>
-                               </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">JavaScript</h3>
-                                       <span class="skills__number">60%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__js"></span>
-                                   </div>
-                               </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">WordPress</h3>
-                                       <span class="skills__number">70%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__wordpress"></span>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                    </div>
-                </div>
-            </section>
-
-              <!--==================== QUALIFICATION ====================-->
-        <section class="qualification__section">
-            <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">My personal journey</span>
-
-            <div class="qualification__container container">
-                <div class="qualification__tabs">
-                    <div class="qualification__button button--flex qualification__active" data-target='#education'>
-                        <i class="uil uil-graduation-cap qualification__icon"></i>
-                        Education
-                    </div>
-
-                    <div class="qualification__button button--flex" data-target="#work">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Work
-                    </div>
-                </div>
-
-                <div class="qualification__sections">
-            <!--==================== QUALIFICATION CONTENT 1 ====================-->
-            <div class="qualification__content qualification__active" data-content id="education">
-             <!--==================== QUALIFICATION 1 ====================--> 
-             <div class="qualification__data">
-                 <div>
-                     <h3 class="qualification__title">Diploma in English </h3>
-                     <span class="qualification__subtitle">British Council, Kandy</span>
-                     <div class="qualification__calendar">
-                        <i class="uil uil-calendar-alt"></i>
-                        2011 - 2012
-                     </div>
-                 </div>
-
-                 <div>
-                     <span class="qualification__rounder"></span>
-                     <span class="qualification__line"></span>
-                 </div>
-             </div>
-             
-             <!--==================== QUALIFICATION 2 ====================--> 
-             <div class="qualification__data">
-                <div></div>
-                <div>
-                   <span class="qualification__rounder"></span>
-                   <span class="qualification__line"></span>
-                </div>
-
-                <div>
-                    <h3 class="qualification__title">GCE Adavance Level</h3>
-                    <span class="qualification__subtitle">St.Anthony's College, Kandy</span>
-                    <div class="qualification__calendar">
-                       <i class="uil uil-calendar-alt"></i>
-                       2012 - 2014
-                    </div>
-                </div>
-            </div> 
-
-            <!--==================== QUALIFICATION 3 ====================--> 
-            <div class="qualification__data">
-                <div>
-                    <h3 class="qualification__title">BSc Management Information System</h3>
-                    <span class="qualification__subtitle">NSBM Green University</span>
-                    <div class="qualification__calendar">
-                       <i class="uil uil-calendar-alt"></i>
-                       2015 - 2018
-                    </div>
-                </div>
-
-                <div>
-                    <span class="qualification__rounder"></span>
-                    <span class="qualification__line"></span>
-                </div>
-            </div> 
-
-            <!--==================== QUALIFICATION 4 ====================--> 
-            <div class="qualification__data">
-                <div></div>
-                <div>
-                    <span class="qualification__rounder"></span>
-                   <!-- <span class="qualification__line"></span> -->
-                </div>
-
-                <div>
-                    <h3 class="qualification__title">Data Analyst Professional Certification</h3>
-                    <span class="qualification__subtitle">Google | Coursera - Online</span>
-                    <div class="qualification__calendar">
-                       <i class="uil uil-calendar-alt"></i>
-                       2021
-                    </div>
-                </div>
-
-                
-            </div>
-            </div>
-            
-            <!--==================== QUALIFICATION CONTENT 2 ====================-->
-            <div class="qualification__content" data-content id="work">
-                <!--==================== QUALIFICATION 1 ====================--> 
-                <div class="qualification__data">
-                    <div>
-                        <h3 class="qualification__title">Trainee Banking Assistant</h3>
-                        <span class="qualification__subtitle">DFCC Head Office - Colombo</span>
-                        <div class="qualification__calendar">
-                           <i class="uil uil-calendar-alt"></i>
-                           2017 - 2019
-                        </div>
-                    </div>
-   
-                    <div>
-                        <span class="qualification__rounder"></span>
-                        <span class="qualification__line"></span>
-                    </div>
-                </div>
-                
-                <!--==================== QUALIFICATION 2 ====================--> 
-                <div class="qualification__data">
-                   <div></div>
-                   <div>
-                      <span class="qualification__rounder"></span>
-                      <span class="qualification__line"></span>
-                   </div>
-   
-                   <div>
-                       <h3 class="qualification__title">Banking Assistant</h3>
-                       <span class="qualification__subtitle">DFCC Head Office - Colombo</span>
-                       <div class="qualification__calendar">
-                          <i class="uil uil-calendar-alt"></i>
-                          2019 - 2020
-                       </div>
-                   </div>
-               </div> 
-   
-               <!--==================== QUALIFICATION 3 ====================--> 
-               <div class="qualification__data">
-                   <div>
-                       <h3 class="qualification__title">Data Analyst - Digital banking</h3>
-                       <span class="qualification__subtitle">DFCC Head Office - Colombo</span>
-                       <div class="qualification__calendar">
-                          <i class="uil uil-calendar-alt"></i>
-                          2020 - Present
-                       </div>
-                   </div>
-   
-                   <div>
-                       <span class="qualification__rounder"></span>
-                       <!-- <span class="qualification__line"></span> -->
-                   </div>
-               </div> 
-          
-               </div> 
-             
-               </div>
-            </div>
-        </section>
-      
-        <!--==================== SERVICES ====================-->
-        <section class="services section" id="services">
-            <h2 class="section__title">Services</h2>
-            <span class="section__subtitle">What I offer</span>
-
-            <div class="services__container container grid">
-        <!--==================== SERVICES 1 ====================-->  
-        <div class="services__content">
-            <div>
-                <i class="uil uil-analytics skills__icon"></i>
-                <h3 class="services__title">Data Analyst<br></h3>
-            </div>
-            <span class="button button--flex button--small button--link services__button">
-                View more
-                <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-                <div class="services__modal-content">
-                    <h4 class="services__modal-title">Data Analyst <br></h4>
-                    <i class="uil uil-times services__modal-close"></i>
-
-                    <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>I analize data systems.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Automating information retrieval.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Systematically applying statistical and logical techniques.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Visualizing graphs, charts and preparing reports and dashboards.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>  
-        
-        <!--==================== SERVICES 2 ====================--> 
-        <div class="services__content">
-            <div>
-                <i class="uil uil-money-bill skills__icon"></i>
-                <h3 class="services__title">Banker<br> </h3>
-            </div>
-            <span class="button button--flex button--small button--link services__button">
-                View more
-                <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-                <div class="services__modal-content">
-                    <h4 class="services__modal-title">Banker<br></h4>
-                    <i class="uil uil-times services__modal-close"></i>
-
-                    <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Assiting both personal and commercial clients with financial questions and needs.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Maintain customer acoounts and help resolve disputes.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Refer customers to loan officers or other financial specialist.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Systematically applying statistical and logical techniques.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>  
-       
-        <!--==================== SERVICES 3 ====================-->
-        <div class="services__content">
-            <div>
-                <i class="uil uil-arrow services__icon"></i>
-                <h3 class="services__title">Web Developer<br></h3>
-            </div>
-            <span class="button button--flex button--small button--link services__button">
-                View more
-                <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-
-            <div class="services__modal">
-                <div class="services__modal-content">
-                    <h4 class="services__modal-title">Web  Developer<br></h4>
-                    <i class="uil uil-times services__modal-close"></i>
-
-                    <ul class="services__modal-services grid">
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>I develop the user interface.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Webpage development.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>I create Ux element interactions.</p>
-                        </li>
-
-                        <li class="services__modal-service">
-                            <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Well trained in WordPress.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> 
-  
-       
+  <main>
+    <!-- 01. Hero -->
+    <section class="hero" id="home">
+      <div class="hero__bg">
+        <div class="hero__mesh"></div>
+        <div class="hero__glow"></div>
+        <div class="hero__glow-2"></div>
+        <canvas id="hero-canvas"></canvas>
+      </div>
+      <div class="hero__content">
+        <div class="hero__text">
+          <div class="hero__badge reveal">
+            <span class="hero__badge-dot"></span>
+            Available for projects
+          </div>
+          <h1 class="hero__title reveal reveal-delay-1">
+            <span class="word-reveal"><span class="word" style="transition-delay:0.1s">Turning</span> <span class="word" style="transition-delay:0.18s">Data</span> <span class="word" style="transition-delay:0.26s">Into</span></span><br>
+            <span class="word-reveal"><span class="word hero__title-accent" style="transition-delay:0.4s">Actionable</span> <span class="word hero__title-accent" style="transition-delay:0.48s">Insights</span></span>
+          </h1>
+          <p class="hero__description reveal reveal-delay-2">
+            I'm Prashanna — a data analyst and web developer who bridges the gap between complex data and beautiful digital experiences. I help businesses make smarter decisions through analytics and modern web solutions.
+          </p>
+          <div class="hero__typewriter reveal reveal-delay-2">
+            <span class="hero__typewriter-label">I'm a</span>
+            <span class="hero__typewriter-text" id="typewriter" data-phrases='["Data Analyst","Web Developer","Problem Solver","Banking Expert","Creative Thinker"]'></span>
+          </div>
+          <div class="hero__cta-group reveal reveal-delay-3">
+            <a href="#projects" class="btn btn--primary btn--lg">View Work <i class="uil uil-arrow-right btn__icon"></i></a>
+            <a href="#contact" class="btn btn--ghost btn--lg">Contact Me</a>
+          </div>
         </div>
-        </section>
-        <!--==================== PORTFOLIO ====================-->
-        <section class="portfolio section" id="portfolio">
-
-            <h2 class="section__title">Portfolio</h2>
-            <span class="section__subtitle">Most recent works</span>
-
-            <div class="portfolio__container container swiper-container">
-                <div class="swiper-wrapper">
-        <!--==================== PORTFOLIO 1 ====================-->
-        
-            <div class="portfolio__content grid swiper-slide">
-                <img src="./packages/images/portfolio1.jpg" alt="" class="portfolio__img">
-
-                <div class="portfolio_">
-                    <h3 class="portfolio__title">Modern Dashboard</h3>
-                    <p class="portfolio__description">Data analitical dashboard adaptable to all devices, 
-                        with ui components and animated interactions.</p>
-                    <a href="#" class="button button--flex button--small portfolio__button">
-                        Demo
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!--==================== PORTFOLIO 2 ====================-->
-        
-            <div class="portfolio__content grid swiper-slide">
-                <img src="./packages/images/portfolio3.PNG" alt="" class="portfolio__img">
-
-                <div class="portfolio_">
-                    <h3 class="portfolio__title">E-Commerce website</h3>
-                    <p class="portfolio__description">Above Amazon clone is adaptable to all devices, with 
-                        ui components and animated interactions.</p>
-                    <a href="#" class="button button--flex button--small portfolio__button">
-                        Demo
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!--==================== PORTFOLIO 3 ====================-->
-        
-            <div class="portfolio__content grid swiper-slide">
-                <img src="./packages/images/portfolio2.png" alt="" class="portfolio__img">
-
-                <div class="portfolio_">
-                    <h3 class="portfolio__title">Brand Design</h3>
-                    <p class="portfolio__description">Tesla Clone is adaptable to all devices, with 
-                        ui components and animated interactions.</p>
-                    <a href="#" class="button button--flex button--small portfolio__button">
-                        Demo
-                        <i class="uil uil-arrow-right button__icon"></i>
-                    </a>
-                </div>
-            </div>
-                </div>
-
-            <!-- add arrows-->
-            <div class="swiper-button-next">
-                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-            </div>
-
-            <div class="swiper-button-prev">
-                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-            </div>
-
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
-            
-        
+        <div class="hero__visual reveal reveal-delay-2">
+          <div class="hero__image-wrapper">
+            <div class="hero__image-blob"></div>
+            <img src="packages/images/pras-1.jpeg" alt="Prashanna Sathiyamoorthy" class="hero__image">
+          </div>
         </div>
+      </div>
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
 
-        </section>
+    <!-- Marquee Band -->
+    <div class="marquee-band">
+      <div class="marquee-band__inner">
+        <span class="marquee-band__item">Data Analyst <span class="marquee-band__dot"></span></span>
+        <span class="marquee-band__item">Web Developer <span class="marquee-band__dot"></span></span>
+        <span class="marquee-band__item">Problem Solver <span class="marquee-band__dot"></span></span>
+        <span class="marquee-band__item">Banking Expert <span class="marquee-band__dot"></span></span>
+        <span class="marquee-band__item">Data Analyst <span class="marquee-band__dot"></span></span>
+        <span class="marquee-band__item">Web Developer <span class="marquee-band__dot"></span></span>
+        <span class="marquee-band__item">Problem Solver <span class="marquee-band__dot"></span></span>
+        <span class="marquee-band__item">Banking Expert <span class="marquee-band__dot"></span></span>
+      </div>
+    </div>
 
-        <!--==================== PROJECT IN MIND ====================-->
-        <section class="project section">
-
-            <div class="project__bg">
-                <div class="project__container container grid">
-                    <div class="project__data">
-                        <h2 class="project__title">You have a new project?</h2>
-                        <p class="project__description">Contact me now and get discounts on your Web development projects.</p>
-                        <a href="#contact" class="button button--flex button--white">Contact me
-                            <i class="uil uil-message project__icon button__icon"></i>
-                        </a>
-                       
-                    </div>
-                    <!-- <img src="assets/img/project.png" alt="" class="project__img"> -->
-                </div>
-            </div>
-
-        </section>
-
-        <!--==================== TESTIMONIAL ====================-->
-        <section class="testimonial section">
-
-            <h2 class="section__title">Testimonials</h2>
-            <span class="section__subtitle">My client saying</span>
-
-            <div class="testimonial__container container swiper-container">
-                <div class="swiper-wrapper">
-                <!--==================== TESTIMONIAL 1 ====================-->
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="./packages/images/arun.PNG" alt="" class="testimonial__img">
-                                
-                                <div>
-                                    <h3 class="testimonial__name">Arun Prashanth</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-                            <div>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the 
-                            possible quality and attention and support 24 hours a day.
-                        </p>
-                    </div>
-                    <!--==================== TESTIMONIAL 2 ====================-->
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="./packages/images/yuga.PNG" alt="" class="testimonial__img">
-                                
-                                <div>
-                                    <h3 class="testimonial__name">Yugadarshan</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-                            <div>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the 
-                            possible quality and attention and support 24 hours a day.
-                        </p>
-                    </div>
-                    <!--==================== TESTIMONIAL 3 ====================-->
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="./packages/images/shenan.PNG" alt="" class="testimonial__img">
-                                
-                                <div>
-                                    <h3 class="testimonial__name">Shenan Sachinthan</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-                            <div>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the 
-                            possible quality and attention and support 24 hours a day.</p>
-                    </div>      
-                </div>
-
-                <!--Add pagination-->
-                <div class="swiper-pagination swiper-pagination-testimonial"></div>
-            </div>
-            </section>
-
-        <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact me</h2>
-            <span class="section__subtitle">Get in touch</span>
-
-            <div class="contact__container container grid">
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-phone-alt contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Call me</h3>
-                            <span class="contatc__subtitle">(+94) 755422421</span>
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">E-mail</h3>
-                            <span class="contatc__subtitle">Prashanna01@gmail.com</span>
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-map-marker contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Location</h3>
-                            <span class="contatc__subtitle">Kandy, Sri Lanka</span>
-                        </div>
-                    </div>
-                </div>
-
-                <form action="" class="contact__form grid">
-                    <div class="contact__inputs grid">
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
-                        </div>
-
-                        <div class="contact__content">
-                            <label for="" class="contact__label">E-mail</label>
-                            <input type="email" class="contact__input">
-                        </div>
-                    </div>
-
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Subject</label>
-                        <input type="text" class="contact__input">
-                    </div>
-
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Description</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
-                    </div>
-
-                    <div>
-                        <a href="#" class="button button--flex">
-                            Send message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </form>
-            </div>
-
-        </section>
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Prashanna Sathiyamoorthy</h1>
-                    <span class="footer__subtitle">Data Analyst</span>
-                </div>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#services" class="footer__link">Services</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="footer__link">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="footer__link">Contact</a>
-                    </li>
-                </ul>
-
-                <div class="footer__socials">
-                    <a href=https://www.facebook.com/prashanna.drashan" target="_blank" class="footer__social">
-                        <i class="uil uil-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/prashanna01/" target="_blank" class="footer__social">
-                        <i class="uil uil-instagram"></i>
-                    </a>
-                    <a href="https://twitter.com/prashanna01" target="_blank" class="footer__social">
-                        <i class="uil uil-twitter-alt"></i>
-                    </a>
-                </div>
-            </div>
-            <p class="footer__copy">&#169; Ratheshan03. All rights reserved.</p>
+    <!-- 02. Quick Highlights -->
+    <section class="highlights" id="highlights">
+      <div class="container">
+        <div class="highlights__grid">
+          <div class="highlight-card reveal">
+            <div class="highlight-card__number" data-count="3" data-suffix="+">0</div>
+            <div class="highlight-card__label">Years Experience</div>
+          </div>
+          <div class="highlight-card reveal reveal-delay-1">
+            <div class="highlight-card__number" data-count="15" data-suffix="+">0</div>
+            <div class="highlight-card__label">Projects Delivered</div>
+          </div>
+          <div class="highlight-card reveal reveal-delay-2">
+            <div class="highlight-card__number" data-count="10" data-suffix="+">0</div>
+            <div class="highlight-card__label">Technologies</div>
+          </div>
+          <div class="highlight-card reveal reveal-delay-3">
+            <div class="highlight-card__number" data-count="5" data-suffix="+">0</div>
+            <div class="highlight-card__label">Certifications</div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup__icon"></i>
-    </a>
-    
+    <!-- 03. About -->
+    <section class="section" id="about">
+      <div class="section-number" data-scroll-y="40">01</div>
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__image-wrapper reveal">
+            <img src="packages/images/pras-2.jpeg" alt="Prashanna at work" class="about__image">
+            <div class="about__image-decoration"></div>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <span class="section__label"><i class="uil uil-user"></i> About Me</span>
+            <h2 class="section__title">I turn complex data into clear, compelling stories.</h2>
+            <p class="about__text">
+              With over 3 years spanning data analytics, digital banking, and web development, I've developed a unique ability to see both the numbers and the narrative behind them. I don't just analyze data — I reveal the insights that drive real business outcomes.
+            </p>
+            <div class="about__values">
+              <div class="about__value">
+                <div class="about__value-icon"><i class="uil uil-lightbulb"></i></div>
+                Data-First Thinking
+              </div>
+              <div class="about__value">
+                <div class="about__value-icon"><i class="uil uil-palette"></i></div>
+                Design-Centered
+              </div>
+              <div class="about__value">
+                <div class="about__value-icon"><i class="uil uil-rocket"></i></div>
+                Results-Driven
+              </div>
+              <div class="about__value">
+                <div class="about__value-icon"><i class="uil uil-shield-check"></i></div>
+                Quality Focused
+              </div>
+            </div>
+            <a href="#contact" class="btn btn--primary">Download CV <i class="uil uil-download-alt btn__icon"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="./packages/js/swiper-bundle.min.js"></script>
+    <!-- 04. Expertise -->
+    <section class="section" id="expertise" style="background: var(--bg-alt);">
+      <div class="section-number" data-scroll-y="40">02</div>
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-briefcase-alt"></i> Expertise</span>
+          <h2 class="section__title">What I Bring to the Table</h2>
+          <p class="section__subtitle">A multi-disciplinary skill set spanning data, development, and strategy — designed to deliver end-to-end value.</p>
+        </div>
+        <div class="expertise__grid">
+          <div class="expertise-card reveal">
+            <div class="expertise-card__icon"><i class="uil uil-analytics"></i></div>
+            <h3 class="expertise-card__title">Data Analytics</h3>
+            <p class="expertise-card__description">Transforming raw data into actionable intelligence through statistical analysis, visualization, and automated reporting systems.</p>
+          </div>
+          <div class="expertise-card reveal reveal-delay-1">
+            <div class="expertise-card__icon"><i class="uil uil-arrow"></i></div>
+            <h3 class="expertise-card__title">Web Development</h3>
+            <p class="expertise-card__description">Building modern, responsive web applications with clean code, intuitive interfaces, and performance-optimized architecture.</p>
+          </div>
+          <div class="expertise-card reveal reveal-delay-2">
+            <div class="expertise-card__icon"><i class="uil uil-money-bill"></i></div>
+            <h3 class="expertise-card__title">Digital Banking</h3>
+            <p class="expertise-card__description">Deep domain expertise in financial systems, digital transformation, and banking technology solutions that drive operational efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!--==================== MAIN JS ====================-->
-    <script src="./packages/js/main.js"></script>
+    <!-- 05. Skills Ecosystem -->
+    <section class="section" id="skills">
+      <div class="section-number" data-scroll-y="40">03</div>
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-file-alt"></i> Skills</span>
+          <h2 class="section__title">Technical Ecosystem</h2>
+          <p class="section__subtitle">A carefully curated toolkit spanning analytics, development, and business domains.</p>
+        </div>
+        <div class="skills__filters" id="skillFilters">
+          <button class="skills__filter active" data-filter="all">All</button>
+          <button class="skills__filter" data-filter="analytics">Analytics</button>
+          <button class="skills__filter" data-filter="development">Development</button>
+          <button class="skills__filter" data-filter="banking">Banking</button>
+          <button class="skills__filter" data-filter="tools">Tools</button>
+        </div>
+        <div class="skills__grid" id="skillsGrid">
+          <div class="skill-card reveal" data-category="analytics"><div class="skill-card__icon"><i class="uil uil-brackets-curly"></i></div><div class="skill-card__name">Python</div><div class="skill-card__level">Advanced</div></div>
+          <div class="skill-card reveal reveal-delay-1" data-category="analytics"><div class="skill-card__icon"><i class="uil uil-chart-bar"></i></div><div class="skill-card__name">Tableau</div><div class="skill-card__level">Advanced</div></div>
+          <div class="skill-card reveal reveal-delay-2" data-category="analytics"><div class="skill-card__icon"><i class="uil uil-database"></i></div><div class="skill-card__name">SQL</div><div class="skill-card__level">Intermediate</div></div>
+          <div class="skill-card reveal reveal-delay-3" data-category="development"><div class="skill-card__icon"><i class="uil uil-html5"></i></div><div class="skill-card__name">HTML5</div><div class="skill-card__level">Expert</div></div>
+          <div class="skill-card reveal reveal-delay-4" data-category="development"><div class="skill-card__icon"><i class="uil uil-css3-simple"></i></div><div class="skill-card__name">CSS3</div><div class="skill-card__level">Advanced</div></div>
+          <div class="skill-card reveal" data-category="development"><div class="skill-card__icon"><i class="uil uil-java-script"></i></div><div class="skill-card__name">JavaScript</div><div class="skill-card__level">Intermediate</div></div>
+          <div class="skill-card reveal reveal-delay-1" data-category="development"><div class="skill-card__icon"><i class="uil uil-wordpress"></i></div><div class="skill-card__name">WordPress</div><div class="skill-card__level">Advanced</div></div>
+          <div class="skill-card reveal reveal-delay-2" data-category="banking"><div class="skill-card__icon"><i class="uil uil-money-bill"></i></div><div class="skill-card__name">Digital Banking</div><div class="skill-card__level">Expert</div></div>
+          <div class="skill-card reveal reveal-delay-3" data-category="banking"><div class="skill-card__icon"><i class="uil uil-window"></i></div><div class="skill-card__name">Banking Operations</div><div class="skill-card__level">Expert</div></div>
+          <div class="skill-card reveal reveal-delay-4" data-category="tools"><div class="skill-card__icon"><i class="uil uil-google"></i></div><div class="skill-card__name">Google Suite</div><div class="skill-card__level">Advanced</div></div>
+          <div class="skill-card reveal" data-category="tools"><div class="skill-card__icon"><i class="uil uil-file-alt"></i></div><div class="skill-card__name">MS Office</div><div class="skill-card__level">Expert</div></div>
+          <div class="skill-card reveal reveal-delay-1" data-category="analytics"><div class="skill-card__icon"><i class="uil uil-chart-pie"></i></div><div class="skill-card__name">Power BI</div><div class="skill-card__level">Intermediate</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. Experience Timeline -->
+    <section class="section" id="experience" style="background: var(--bg-alt);">
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-graduation-cap"></i> Journey</span>
+          <h2 class="section__title">Experience & Education</h2>
+          <p class="section__subtitle">A timeline of growth, learning, and professional milestones.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">2020 — Present</div>
+            <h3 class="timeline__title">Data Analyst — Digital Banking</h3>
+            <div class="timeline__company">DFCC Head Office, Colombo</div>
+            <p class="timeline__description">Leading data analysis for digital banking initiatives, building dashboards, and driving data-informed decisions across departments.</p>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">2021</div>
+            <h3 class="timeline__title">Data Analyst Professional Certification</h3>
+            <div class="timeline__company">Google | Coursera — Online</div>
+            <p class="timeline__description">Completed Google's comprehensive data analytics program covering spreadsheets, SQL, R programming, and data visualization.</p>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">2019 — 2020</div>
+            <h3 class="timeline__title">Banking Assistant</h3>
+            <div class="timeline__company">DFCC Head Office, Colombo</div>
+            <p class="timeline__description">Managed customer accounts, processed transactions, and provided financial advisory services in a fast-paced banking environment.</p>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">2017 — 2019</div>
+            <h3 class="timeline__title">Trainee Banking Assistant</h3>
+            <div class="timeline__company">DFCC Head Office, Colombo</div>
+            <p class="timeline__description">Began career in banking, learning core financial operations, customer service excellence, and digital banking fundamentals.</p>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">2015 — 2018</div>
+            <h3 class="timeline__title">BSc Management Information System</h3>
+            <div class="timeline__company">NSBM Green University</div>
+            <p class="timeline__description">Graduated with a strong foundation in information systems, business management, and technology-driven problem solving.</p>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">2012 — 2014</div>
+            <h3 class="timeline__title">GCE Advanced Level</h3>
+            <div class="timeline__company">St. Anthony's College, Kandy</div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__date">2011 — 2012</div>
+            <h3 class="timeline__title">Diploma in English</h3>
+            <div class="timeline__company">British Council, Kandy</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. Featured Projects -->
+    <section class="section" id="projects">
+      <div class="section-number" data-scroll-y="40">04</div>
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-scenery"></i> Portfolio</span>
+          <h2 class="section__title">Featured Projects</h2>
+          <p class="section__subtitle">A selection of projects that showcase my approach to solving real-world problems.</p>
+        </div>
+        <div class="projects__grid">
+          <div class="project-card reveal">
+            <div class="project-card__image">
+              <img src="packages/images/portfolio1.jpg" alt="Analytics Dashboard" loading="lazy">
+              <div class="project-card__overlay">
+                <span class="project-card__overlay-text">View Case Study <i class="uil uil-arrow-right"></i></span>
+              </div>
+            </div>
+            <div>
+              <span class="project-card__tag">Data Visualization</span>
+              <h3 class="project-card__title">Analytics Dashboard</h3>
+              <p class="project-card__description">A comprehensive data analytics dashboard with real-time visualizations, interactive charts, and responsive design built for actionable insights across departments.</p>
+              <div class="project-card__tech">
+                <span>Python</span><span>Tableau</span><span>SQL</span><span>Dashboard</span>
+              </div>
+              <a href="#" class="btn btn--outline case-study-btn" data-case="dashboard">View Case Study <i class="uil uil-arrow-right btn__icon"></i></a>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-card__image">
+              <img src="packages/images/portfolio3.PNG" alt="E-Commerce Platform" loading="lazy">
+              <div class="project-card__overlay">
+                <span class="project-card__overlay-text">View Case Study <i class="uil uil-arrow-right"></i></span>
+              </div>
+            </div>
+            <div>
+              <span class="project-card__tag">Web Development</span>
+              <h3 class="project-card__title">E-Commerce Platform</h3>
+              <p class="project-card__description">A fully responsive e-commerce platform featuring dynamic product listings, intuitive shopping cart, and seamless checkout experience with modern UI patterns.</p>
+              <div class="project-card__tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>WordPress</span>
+              </div>
+              <a href="#" class="btn btn--outline case-study-btn" data-case="ecommerce">View Case Study <i class="uil uil-arrow-right btn__icon"></i></a>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-card__image">
+              <img src="packages/images/portfolio2.png" alt="Brand Design System" loading="lazy">
+              <div class="project-card__overlay">
+                <span class="project-card__overlay-text">View Case Study <i class="uil uil-arrow-right"></i></span>
+              </div>
+            </div>
+            <div>
+              <span class="project-card__tag">Brand Design</span>
+              <h3 class="project-card__title">Brand Design System</h3>
+              <p class="project-card__description">A meticulously crafted brand identity system with consistent visual language, design tokens, and component library for scalable digital experiences.</p>
+              <div class="project-card__tech">
+                <span>Design</span><span>Branding</span><span>UI/UX</span><span>Systems</span>
+              </div>
+              <a href="#" class="btn btn--outline case-study-btn" data-case="brand">View Case Study <i class="uil uil-arrow-right btn__icon"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. Case Study Modal -->
+    <div class="modal-overlay" id="caseModal">
+      <div class="modal">
+        <button class="modal__close" id="modalClose"><i class="uil uil-times"></i></button>
+        <span class="modal__tag" id="modalTag"></span>
+        <h2 class="modal__title" id="modalTitle"></h2>
+        <div class="modal__section">
+          <h4 class="modal__section-title">Challenge</h4>
+          <p id="modalChallenge"></p>
+        </div>
+        <div class="modal__section">
+          <h4 class="modal__section-title">Strategy</h4>
+          <p id="modalStrategy"></p>
+        </div>
+        <div class="modal__section">
+          <h4 class="modal__section-title">Solution</h4>
+          <p id="modalSolution"></p>
+        </div>
+        <div class="modal__section">
+          <h4 class="modal__section-title">Outcome</h4>
+          <p id="modalOutcome"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 09. How I Work -->
+    <section class="section" id="process" style="background: var(--bg-alt);">
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-process"></i> Process</span>
+          <h2 class="section__title">How I Work</h2>
+          <p class="section__subtitle">A proven methodology that ensures every project delivers measurable results.</p>
+        </div>
+        <div class="process__grid">
+          <div class="process-card reveal">
+            <div class="process-card__step">01</div>
+            <h3 class="process-card__title">Discover</h3>
+            <p class="process-card__description">I dive deep into understanding your goals, audience, and challenges. Every great solution starts with asking the right questions.</p>
+          </div>
+          <div class="process-card reveal reveal-delay-1">
+            <div class="process-card__step">02</div>
+            <h3 class="process-card__title">Research & Analyze</h3>
+            <p class="process-card__description">Data drives every decision. I analyze patterns, benchmark competitors, and identify opportunities hidden in the numbers.</p>
+          </div>
+          <div class="process-card reveal reveal-delay-2">
+            <div class="process-card__step">03</div>
+            <h3 class="process-card__title">Strategize</h3>
+            <p class="process-card__description">I translate insights into a clear, actionable roadmap — from data architecture to user flows and technical specifications.</p>
+          </div>
+          <div class="process-card reveal reveal-delay-3">
+            <div class="process-card__step">04</div>
+            <h3 class="process-card__title">Design</h3>
+            <p class="process-card__description">I create intuitive interfaces and interactive prototypes. Every pixel is crafted with purpose and every interaction tells a story.</p>
+          </div>
+          <div class="process-card reveal reveal-delay-4">
+            <div class="process-card__step">05</div>
+            <h3 class="process-card__title">Develop & Build</h3>
+            <p class="process-card__description">Clean, performant code brings designs to life. I build scalable solutions with modern technologies and best practices.</p>
+          </div>
+          <div class="process-card reveal">
+            <div class="process-card__step">06</div>
+            <h3 class="process-card__title">Optimize & Scale</h3>
+            <p class="process-card__description">Launch is just the beginning. I continuously monitor, test, and refine to ensure peak performance and continuous improvement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. What Makes Me Different -->
+    <section class="section" id="differentiator">
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-star"></i> Differentiator</span>
+          <h2 class="section__title">What Makes Me Different</h2>
+          <p class="section__subtitle">Beyond technical skills — a unique blend of analytical thinking and creative execution.</p>
+        </div>
+        <div class="differentiator__grid">
+          <div class="differentiator-card reveal">
+            <div class="differentiator-card__icon"><i class="uil uil-brain"></i></div>
+            <h3 class="differentiator-card__title">Data + Design Hybrid</h3>
+            <p class="differentiator-card__text">Most professionals think in either numbers or pixels. I think in both — creating solutions that are both analytically sound and visually compelling.</p>
+          </div>
+          <div class="differentiator-card reveal reveal-delay-1">
+            <div class="differentiator-card__icon"><i class="uil uil-lightbulb-alt"></i></div>
+            <h3 class="differentiator-card__title">Strategic Thinker</h3>
+            <p class="differentiator-card__text">I don't just execute tasks — I understand the "why" behind every project. This means my work consistently aligns with broader business objectives.</p>
+          </div>
+          <div class="differentiator-card reveal reveal-delay-2">
+            <div class="differentiator-card__icon"><i class="uil uil-shield-check"></i></div>
+            <h3 class="differentiator-card__title">Banking Domain Expert</h3>
+            <p class="differentiator-card__text">Years in digital banking give me a rare understanding of financial systems, compliance, and the unique challenges of fintech solutions.</p>
+          </div>
+          <div class="differentiator-card reveal reveal-delay-3">
+            <div class="differentiator-card__icon"><i class="uil uil-award"></i></div>
+            <h3 class="differentiator-card__title">Quality Obsessed</h3>
+            <p class="differentiator-card__text">Every project I deliver reflects my commitment to excellence. I test rigorously, iterate constantly, and never ship anything I'm not proud of.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Services -->
+    <section class="section" id="services" style="background: var(--bg-alt);">
+      <div class="section-number" data-scroll-y="40">05</div>
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-briefcase-alt"></i> Services</span>
+          <h2 class="section__title">What I Offer</h2>
+          <p class="section__subtitle">Outcome-focused services designed to deliver measurable business impact.</p>
+        </div>
+        <div class="services__grid">
+          <div class="service-card flip-card reveal" style="height:320px;">
+            <div class="flip-inner">
+              <div class="flip-front service-card__front">
+                <div class="service-card__icon"><i class="uil uil-analytics"></i></div>
+                <h3 class="service-card__title">Data Analytics</h3>
+                <p class="service-card__description">Turn your data into a competitive advantage with insights that drive smarter decisions.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Data Analytics</h3>
+                <p>Interactive dashboards, statistical modeling, data automation, and business intelligence solutions that drive smarter decisions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-card flip-card reveal reveal-delay-1" style="height:320px;">
+            <div class="flip-inner">
+              <div class="flip-front service-card__front">
+                <div class="service-card__icon"><i class="uil uil-arrow"></i></div>
+                <h3 class="service-card__title">Web Development</h3>
+                <p class="service-card__description">Build modern, fast, and beautiful websites that convert visitors into customers.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Web Development</h3>
+                <p>Responsive web applications, custom WordPress solutions, UI/UX design, and performance optimization.</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-card flip-card reveal reveal-delay-2" style="height:320px;">
+            <div class="flip-inner">
+              <div class="flip-front service-card__front">
+                <div class="service-card__icon"><i class="uil uil-money-bill"></i></div>
+                <h3 class="service-card__title">Digital Banking</h3>
+                <p class="service-card__description">Navigate the digital transformation of financial services with expert guidance.</p>
+              </div>
+              <div class="flip-back">
+                <h3>Digital Banking</h3>
+                <p>Digital banking strategy, financial data analysis, process automation, and compliance & reporting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-message"></i> Testimonials</span>
+          <h2 class="section__title">What Clients Say</h2>
+          <p class="section__subtitle">Real feedback from real collaborations.</p>
+        </div>
+        <div class="testimonials__grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i>
+            </div>
+            <p class="testimonial-card__text">"Outstanding attention to detail and remarkable quality. The project was delivered with precision, professionalism, and dedicated support throughout."</p>
+            <div class="testimonial-card__author">
+              <img src="packages/images/arun.PNG" alt="Arun Prashanth" class="testimonial-card__avatar">
+              <div>
+                <div class="testimonial-card__name">Arun Prashanth</div>
+                <div class="testimonial-card__role">Client</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i>
+            </div>
+            <p class="testimonial-card__text">"An exceptional professional who truly understands data. The insights delivered exceeded expectations and drove real, measurable business results."</p>
+            <div class="testimonial-card__author">
+              <img src="packages/images/yuga.PNG" alt="Yugadarshan" class="testimonial-card__avatar">
+              <div>
+                <div class="testimonial-card__name">Yugadarshan</div>
+                <div class="testimonial-card__role">Client</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">
+              <i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i><i class="uil uil-star"></i>
+            </div>
+            <p class="testimonial-card__text">"Highly skilled and incredibly reliable. The creative approach and commitment to deadlines made the entire experience truly impressive."</p>
+            <div class="testimonial-card__author">
+              <img src="packages/images/shenan.PNG" alt="Shenan Sachinthan" class="testimonial-card__avatar">
+              <div>
+                <div class="testimonial-card__name">Shenan Sachinthan</div>
+                <div class="testimonial-card__role">Client</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-question-circle"></i> FAQ</span>
+          <h2 class="section__title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq__list">
+          <div class="faq__item reveal">
+            <button class="faq__question">What makes your approach different? <i class="uil uil-angle-down"></i></button>
+            <div class="faq__answer"><div class="faq__answer-content">I combine deep data analytics expertise with modern web development skills. This means I don't just build beautiful interfaces — I build interfaces backed by data-driven decisions. My background in banking also gives me domain knowledge most developers lack.</div></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__question">How do you handle project timelines? <i class="uil uil-angle-down"></i></button>
+            <div class="faq__answer"><div class="faq__answer-content">I start with a clear discovery phase to understand scope and deliverables. Then I break projects into milestones with regular check-ins. This transparent approach means no surprises — you always know where your project stands.</div></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__question">Do you work with international clients? <i class="uil uil-angle-down"></i></button>
+            <div class="faq__answer"><div class="faq__answer-content">Absolutely. I've worked with clients across different time zones and am comfortable with remote collaboration. I use modern tools for communication and project management to ensure seamless cooperation regardless of location.</div></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__question">What's your tech stack? <i class="uil uil-angle-down"></i></button>
+            <div class="faq__answer"><div class="faq__answer-content">For data analytics: Python, SQL, Tableau, Power BI, Google Suite. For web development: HTML5, CSS3, JavaScript, WordPress, with a strong focus on responsive design and performance optimization.</div></div>
+          </div>
+          <div class="faq__item reveal">
+            <button class="faq__question">How do you ensure quality? <i class="uil uil-angle-down"></i></button>
+            <div class="faq__answer"><div class="faq__answer-content">Every project goes through rigorous testing — functional testing, cross-browser compatibility checks, performance audits, and accessibility validation. I also implement continuous monitoring post-launch to catch and fix issues proactively.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Currently Working On -->
+    <section class="section status" id="status">
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label" style="background: rgba(37,99,235,0.15); border-color: rgba(37,99,235,0.3);"><i class="uil uil-fire"></i> Current</span>
+          <h2 class="section__title" style="color: var(--text-inverse);">What I'm Working On</h2>
+          <p class="section__subtitle" style="color: rgba(250,250,250,0.5);">Always learning, always building.</p>
+        </div>
+        <div class="status__grid">
+          <div class="status-card reveal">
+            <div class="status-card__label">Active Project</div>
+            <h3 class="status-card__title">Banking Analytics Platform</h3>
+            <p class="status-card__description">Building a comprehensive analytics dashboard for digital banking operations with real-time KPI tracking.</p>
+          </div>
+          <div class="status-card reveal reveal-delay-1">
+            <div class="status-card__label">Learning</div>
+            <h3 class="status-card__title">Advanced Python & ML</h3>
+            <p class="status-card__description">Deepening expertise in machine learning algorithms and predictive analytics for financial data.</p>
+          </div>
+          <div class="status-card reveal reveal-delay-2">
+            <div class="status-card__label">Exploring</div>
+            <h3 class="status-card__title">Modern Web Frameworks</h3>
+            <p class="status-card__description">Experimenting with React and Next.js to build even more performant and dynamic web applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__header center">
+          <span class="section__label"><i class="uil uil-message"></i> Contact</span>
+          <h2 class="section__title">Let's Work Together</h2>
+          <p class="section__subtitle">Have a project in mind? I'd love to hear about it. Let's create something exceptional.</p>
+        </div>
+        <div class="contact__grid">
+          <div class="contact__info">
+            <div class="contact__item reveal">
+              <div class="contact__item-icon"><i class="uil uil-envelope"></i></div>
+              <div>
+                <div class="contact__item-label">Email</div>
+                <div class="contact__item-value">Prashanna01@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact__item reveal reveal-delay-1">
+              <div class="contact__item-icon"><i class="uil uil-phone-alt"></i></div>
+              <div>
+                <div class="contact__item-label">Phone</div>
+                <div class="contact__item-value">(+94) 755422421</div>
+              </div>
+            </div>
+            <div class="contact__item reveal reveal-delay-2">
+              <div class="contact__item-icon"><i class="uil uil-map-marker"></i></div>
+              <div>
+                <div class="contact__item-label">Location</div>
+                <div class="contact__item-value">Kandy, Sri Lanka</div>
+              </div>
+            </div>
+            <div class="contact__socials reveal reveal-delay-3">
+              <a href="https://www.linkedin.com/in/prashanna-sathiyamoorthy-194704153/" target="_blank" class="contact__social" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
+              <a href="https://www.github.com" target="_blank" class="contact__social" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
+              <a href="https://twitter.com/prashanna01" target="_blank" class="contact__social" aria-label="Twitter"><i class="uil uil-twitter-alt"></i></a>
+              <a href="https://www.facebook.com/prashanna.drashan" target="_blank" class="contact__social" aria-label="Facebook"><i class="uil uil-facebook"></i></a>
+            </div>
+          </div>
+          <form class="contact__form reveal" id="contactForm">
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="name">Name</label>
+                <input class="form__input" type="text" id="name" placeholder="Your name" required>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" id="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="subject">Subject</label>
+              <input class="form__input" type="text" id="subject" placeholder="Project inquiry">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="message">Message</label>
+              <textarea class="form__textarea" id="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="form__submit">Send Message <i class="uil uil-message btn__icon"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 16. Premium Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Prashanna<span style="color: var(--primary);">.</span></div>
+          <p class="footer__brand-description">Data analyst and web developer turning complex data into clear insights and crafting beautiful digital experiences that drive real results.</p>
+          <div class="contact__socials">
+            <a href="https://www.linkedin.com/in/prashanna-sathiyamoorthy-194704153/" target="_blank" class="contact__social" aria-label="LinkedIn"><i class="uil uil-linkedin-alt"></i></a>
+            <a href="https://www.github.com" target="_blank" class="contact__social" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
+            <a href="https://twitter.com/prashanna01" target="_blank" class="contact__social" aria-label="Twitter"><i class="uil uil-twitter-alt"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navigation</h4>
+          <a href="#about" class="footer__link">About</a>
+          <a href="#expertise" class="footer__link">Expertise</a>
+          <a href="#skills" class="footer__link">Skills</a>
+          <a href="#projects" class="footer__link">Projects</a>
+        </div>
+        <div>
+          <h4 class="footer__heading">Services</h4>
+          <a href="#services" class="footer__link">Data Analytics</a>
+          <a href="#services" class="footer__link">Web Development</a>
+          <a href="#services" class="footer__link">Digital Banking</a>
+          <a href="#contact" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="footer__heading">Connect</h4>
+          <a href="mailto:Prashanna01@gmail.com" class="footer__link">Email</a>
+          <a href="tel:+94755422421" class="footer__link">Phone</a>
+          <a href="#" class="footer__link">Kandy, Sri Lanka</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Prashanna Sathiyamoorthy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Up -->
+  <button class="scrollup" id="scrollUp" aria-label="Scroll to top"><i class="uil uil-arrow-up"></i></button>
+
+  <script src="./packages/js/main.js"></script>
 </body>
-
 </html>
